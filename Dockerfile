@@ -10,6 +10,3 @@ RUN mkdir -p $APP_DIR
 ADD templates/ $APP_DIR/templates/
 ADD static/ $APP_DIR/static/
 ADD run.py $APP_DIR
-
-CMD PYTHONPATH=$PYTHONPATH:/usr/src/PIAC01 \
-	FLASK_APP=PIAC01 flask run --host=0.0.0.0
