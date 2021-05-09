@@ -1,9 +1,9 @@
 FROM python:3.8
 
-COPY app.py /app/
-WORKDIR /app
-RUN pip install flask
-RUN export FLASK_APP=app.py
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
 
-EXPOSE 5000
-CMD ["/usr/local/bin/flask", "run", "--host", "0.0.0.0"]
+COPY . .
+
+CMD ["python", "./run.py"]
