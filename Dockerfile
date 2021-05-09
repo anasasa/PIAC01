@@ -1,12 +1,10 @@
-FROM python:3
+FROM python:3.8
 
-ARG APP_DIR=/usr/src/PIAC01
+COPY requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt
 
-WORKDIR /tmp
-ADD requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
+COPY templates/ ./templates/
+COPY static/ ./static/
+COPY run.py ./
 
-RUN mkdir -p $APP_DIR
-ADD templates/ $APP_DIR/templates/
-ADD static/ $APP_DIR/static/
-ADD run.py $APP_DIR
+CMD ["python", "./run.py"]
