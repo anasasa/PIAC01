@@ -7,4 +7,5 @@ COPY templates/ ./templates/
 COPY static/ ./static/
 COPY run.py ./
 
-CMD ["python", "./run.py"]
+CMD PYTHONPATH=$PYTHONPATH:./run.py \
+FLASK_APP=run flask run --host=0.0.0.0
