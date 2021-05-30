@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home page</title>
+</head>
+<body>
+<h1>Welcome in our cloud!</h1>
+<p style="font-size:20px;">See, what we got for you</p>
+<a href="/gallery">Gallery</a><br>
+<a href="/aboutme">About me</a><br>
+<a href="/contact">Contact me</a><br>
+</body>
+</html>

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Home page</title>
-</head>
-<body>
-<h1>Welcome in our cloud!</h1>
-<p style="font-size:20px;">See, what we got for you</p>
-<a href="/gallery">Gallery</a><br>
-<a href="/aboutme">About me</a><br>
-<a href="/contact">Contact me</a><br>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
+
+<div class="container">
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+ <h1 class="display-4">Welcom on my homepage!</h1>
+<p class="lead">This is my website for a programming and application architecture class in the cloud at WSB Wrocław.</p>
+This page is designed to learn programming using: MS Azure, bootstrap, CSS, flask, html, python and many other components. 
+</div>
+</main>
+{% endblock %}
