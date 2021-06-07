@@ -1,13 +1,131 @@
-{% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% set active_page = "index" -%}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/styles.css" type="text/css">
 
-<div class="container">
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
- <h1 class="display-4">Welcom on my homepage!</h1>
-<p class="lead">This is my website for a programming and application architecture class in the cloud at WSB Wrocław.</p>
-This page is designed to learn programming using: MS Azure, bootstrap, CSS, flask, html, python and many other components. 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>Panda Style Student</title>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">PandaStyle</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#aboutme">ABOUT ME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="home">
+  <div class="container text-center">
+   <h3>PANDA STYLE STUDENT</h3>
+    <img src="static/panda_logo.png">
+    <p>This is my website for a programming and application architecture class in the cloud at WSB Wrocław.
+    <br>
+    This page is designed to learn programming using: MS Azure, bootstrap, CSS, flask, html, python and many other components.</p>
+  </div>
 </div>
-</main>
-{% endblock %}
+
+<div id="gallery" class="bg-1">
+  <div class="container text-center">
+    <h3>IMAGE GALLERY</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6758771.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6758773.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6758779.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6782351.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6782353.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="/static/gallery/pexels-max-vakhtbovych-6782354.jpg" alt="Panda Gallery Picture" style="width:100%">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="aboutme">
+  <div class="container">
+  <h3 class="text-center">ABOUT ME</h3>
+  <p class="text-center">Panda style student demanding best as possible degree.</p>
+</div>
+
+<div id="contact">
+  <div class="container">
+  <h3 class="text-center">CONTACT</h3>
+  <p class="text-center">Please, do not bother me.</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Poland</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +0048 700 420 69 69</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: dont@disturb.me</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <p class="text-center">FAN COMMENTS</p>
+  </div>
+</div>
+
+</body>
+<html>
