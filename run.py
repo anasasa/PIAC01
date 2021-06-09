@@ -9,10 +9,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  print(data_file)
   files = os.listdir(data_file)
   files.sort()
-  print(files)
   return render_template("index.html", dispFooter="true", files = files)
 
 @app.route('/guestbook', methods=['GET', 'POST'])

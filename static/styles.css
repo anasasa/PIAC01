@@ -41,6 +41,9 @@ h3, h4 {
 }
 .bg-1 h3 {color: #fff;}
 .bg-1 p {font-style: italic;}
+.img-thumbnail {
+  padding: 0;
+}
 .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -60,15 +63,6 @@ h3, h4 {
   border: 1px solid #333;
   background-color: #fff;
   color: #000;
-}
-.modal-header, h4, .close {
-  background-color: #333;
-  color: #fff !important;
-  text-align: center;
-  font-size: 30px;
-}
-.modal-header, .modal-body {
-  padding: 40px 50px;
 }
 .nav-tabs li a {
   color: #777;
