@@ -1,0 +1,5 @@
+AZDBSERVER = 'pandastyle.database.windows.net'
+AZDBNAME = 'pandastyle'
+AZDBUSER = 'piaclocal'
+AZDBPW = '5hvahNAWPRKPnisppKfxJ'
+AZDBDRIVER = '{ODBC Driver 17 for SQL Server}'

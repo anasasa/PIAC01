@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Panda Style Stydent - Guestbook{% endblock %}
+{% set active_page = "guestbook" -%}
+{% block body %}
+
+<div id="guestbook">
+  <div class="container text-center">
+    <h3 class="text-center">FAN COMMENTS</h3>
+    {% if mode == 'delete' %}
+      <p>Select comments to delete</p>
+      <form method="POST">
+    {% else %}
+      <p>FANS FANS FANS!</p>
+    {% endif %}
+    {% for result in data %}
+    <div class="row">
+      <div class="col-md-4 text-right">
+        {% if mode == 'delete' %}
+          <div class="form-check">
+            {{result.name }} wrote:
+            <input class="form-check-input" name="delcomments" type="checkbox" value="{{result.text}}" aria-label="Comment from {{result.name}}">
+          </div>
+        {% else %}
+          {{result.name }} wrote:
+        {% endif %}
+      </div>
+      <div class="col-md-8 text-left">
+        {{result.text }}
+      </div>
+    </div>    
+    {% else %}
+      <p>No entries.</p>
+    {% endfor %}
+    {% if mode == 'delete' %}
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit" name="submit" value="delete">Delete</button>
+        </div>
+      </div>
+      </form>
+    {% endif %}
+  </div>
+</div>
+
+{% if mode != 'delete' %}
+  <div id="comment">
+    <div class="container text-center">
+    <p>FAN? Drop a comment!</p>
+    <form method="post">  
+      <div class="row">
+        <div class="col-md-4 text-right form-group">
+          <p>Name:</p>
+        </div>
+  	    <div class="col-md-8 form-group">
+  	  	  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+  	    </div>
+      </div>
+      <div class="row">	
+  	    <div class="col-md-4 text-right form-group">
+          <p>Comment:</p>
+        </div>
+  	    <div class="col-md-8 form-group">
+  	    	<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+  	    </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" name="submit" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+{% endif %}
+
+{% endblock %}

@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/styles.css" type="text/css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <title>Panda Style Student</title>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#home">PandaStyle</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#aboutme">ABOUT ME</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% extends "base.html" %}
+{% block title %}Panda Style Student{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
 
 
 <div id="home">
   <div class="container text-center">
    <h3>PANDA STYLE STUDENT</h3>
     <img src="static/panda_logo.png">
-    <p>This is my website for a programming and application architecture class in the cloud at WSB Wrocław.
+    <p>This is my website for programming and application architecture class in the cloud at WSB Wrocław.
     <br>
-    This page is designed to learn programming using: MS Azure, bootstrap, CSS, flask, html, python and many other components.</p>
+    This page is designed to learn programming using: MS Azure, bootstrap, CSS, flask, html, jinja, python and many other components.</p>
   </div>
 </div>
 
@@ -98,7 +67,7 @@
 
   <div class="row">
     <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
+      <p>Need contact? Drop a note.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Poland</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: +0048 700 420 69 69</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: dont@disturb.me</p>
@@ -122,10 +91,6 @@
     </div>
   </div>
   </div>
-  <div class="container">
-    <p class="text-center">FAN COMMENTS</p>
-  </div>
 </div>
 
-</body>
-<html>
+{% endblock %}
