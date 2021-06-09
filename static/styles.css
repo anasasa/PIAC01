@@ -82,14 +82,17 @@ h3, h4 {
 .navbar {
   font-family: Montserrat, sans-serif;
   margin-bottom: 0;
-  background-color: #2d2d30;
   border: 0;
   font-size: 11px !important;
   letter-spacing: 4px;
   opacity: 0.9;
 }
-.navbar li a, .navbar .navbar-brand { 
+.navbar li a { 
   color: #d5d5d5 !important;
+}
+.navbar-brand {
+  color: #d5d5d5 !important;
+  font-size: 1.125rem !important;
 }
 .navbar-nav li a:hover {
   color: #fff !important;

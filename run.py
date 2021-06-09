@@ -1,10 +1,19 @@
 from flask import Flask, render_template, request
 from AzureDB import AzureDB
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+data_file = os.path.join(basedir, 'static/gallery/')
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template("index.html", dispFooter="true")
+  print(data_file)
+  files = os.listdir(data_file)
+  files.sort()
+  print(files)
+  return render_template("index.html", dispFooter="true", files = files)
 
 @app.route('/guestbook', methods=['GET', 'POST'])
 def guestbook():

@@ -4,7 +4,7 @@
 {% block body %}
 
 <div id="guestbook">
-  <div class="container text-center">
+  <div class="container-md text-center">
     <h3 class="text-center">FAN COMMENTS</h3>
     {% if mode == 'delete' %}
       <p>Select comments to delete</p>
@@ -14,7 +14,7 @@
     {% endif %}
     {% for result in data %}
     <div class="row">
-      <div class="col-md-4 text-right">
+      <div class="col text-end">
         {% if mode == 'delete' %}
           <div class="form-check">
             {{result.name }} wrote:
@@ -24,7 +24,7 @@
           {{result.name }} wrote:
         {% endif %}
       </div>
-      <div class="col-md-8 text-left">
+      <div class="col text-start">
         {{result.text }}
       </div>
     </div>    
@@ -33,7 +33,7 @@
     {% endfor %}
     {% if mode == 'delete' %}
       <div class="row">
-        <div class="col-md-12 form-group">
+        <div class="col-xs-12 form-group">
           <button class="btn pull-right" type="submit" name="submit" value="delete">Delete</button>
         </div>
       </div>
@@ -48,23 +48,23 @@
     <p>FAN? Drop a comment!</p>
     <form method="post">  
       <div class="row">
-        <div class="col-md-4 text-right form-group">
+        <div class="col-xs-4 text-right form-group">
           <p>Name:</p>
         </div>
-  	    <div class="col-md-8 form-group">
+  	    <div class="col-xs-8 form-group">
   	  	  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
   	    </div>
       </div>
       <div class="row">	
-  	    <div class="col-md-4 text-right form-group">
+  	    <div class="col-xs-4 text-right form-group">
           <p>Comment:</p>
         </div>
-  	    <div class="col-md-8 form-group">
+  	    <div class="col-xs-8 form-group">
   	    	<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
   	    </div>
       </div>
       <div class="row">
-        <div class="col-md-12 form-group">
+        <div class="col-xs-12 form-group">
           <button class="btn pull-right" name="submit" type="submit">Send</button>
         </div>
       </div>
